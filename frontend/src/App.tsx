@@ -1,4 +1,5 @@
 import ProductCard from "./components/ProductCard";
+import SubjectList from "./components/SubjectList";
 import UserCard from "./components/UserCard";
 
 function App() {
@@ -12,10 +13,16 @@ function App() {
       <ProductCard />
       <div className="px-10 my-4">
         <h1 className=" font-black uppercase text-[40px]">
-          User list api express mysql
+          Users list api express mysql
         </h1>
       </div>
       <UserCard />
+      <div className="px-10 my-4">
+        <h1 className=" font-black uppercase text-[40px]">
+          Subjects list api express mysql
+        </h1>
+      </div>
+      <SubjectList />
     </div>
   );
 }
