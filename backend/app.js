@@ -9,6 +9,7 @@ let usersRouter = require("./routes/users");
 let productsRouter = require("./routes/products");
 let homePage = require("./routes/index");
 let subjectsRouter = require("./routes/subjetcs");
+let teacherTypeRouter = require("./routes/teacherType");
 
 const PUBLIC = path.join(__dirname, "/public");
 const { PORT, VERSION } = process.env;
@@ -30,6 +31,7 @@ server.use("/", homePage);
 server.use(VERSION + "/users", usersRouter);
 server.use(VERSION + "/products", productsRouter);
 server.use(VERSION + "/subjects", subjectsRouter);
+server.use(VERSION + "/teachertype", teacherTypeRouter);
 
 server.listen(PORT, () => {
   console.log(`This server is running on http://localhost:${PORT}`);
