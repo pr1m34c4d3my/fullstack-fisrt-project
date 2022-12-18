@@ -4,7 +4,7 @@ This is my very first time to create a fullstack webapp with javascript/typescri
 
 ## Tech Stack
 
-*Node.js (Express)
-*React.js
-*Taildwind.css
-*MySQL (Sequelize)
+* Node.js (Express)
+* React.js
+* Taildwind.css
+* MySQL (Sequelize)
