@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 type Props = {};
+
 export type Subject = {
   id: number;
   name: string;
@@ -9,6 +10,7 @@ export type Subject = {
 
 function SubjectList({}: Props) {
   const [subjects, getSubjects] = useState<Subject[] | null>(null);
+
   useEffect(() => {
     const url = "http://localhost:8080/v1/subjects";
     axios.get(url).then((response) => {
@@ -22,7 +24,7 @@ function SubjectList({}: Props) {
         {subjects
           ? subjects.map((subject) => {
               return (
-                <li>
+                <li key={subject.id}>
                   <a
                     className="py-1 px-5 rounded-lg font-medium shadow-xl bg-black text-white hover:bg-slate-200 hover:text-black transition-all"
                     href="/:id"

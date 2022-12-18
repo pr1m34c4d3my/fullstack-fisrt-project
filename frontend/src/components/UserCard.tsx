@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 type Props = {};
+
 export type User = {
   id: number;
   name: string;
@@ -29,9 +30,9 @@ function UserCard({}: Props) {
               >
                 <h1 className=" font-bold text-[25px]">{user.name}</h1>
                 <p>{user.email}</p>
-                <div>
+                <div className="mt-5">
                   <a
-                    className="p-1 rounded-md text-white bg-slate-400"
+                    className="py-1 px-5 rounded-md text-white bg-slate-400 hover:bg-white hover:text-black transition-all"
                     href="#"
                   >
                     Detail
